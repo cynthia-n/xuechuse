@@ -1,0 +1,23 @@
+redis:
+  host: '127.0.0.1'
+  port: 6379
+  db: 0
+
+rails_cache:
+  redis:
+    host: '127.0.0.1'
+    port: 6379
+    db: 1
+    namespace: "rails_cache"
+
+sidekiq:
+  redis: 'redis://127.0.0.1:6379/0'
+
+db_settings:
+  xuechuse:
+    host: '127.0.0.1'
+    port: '5432'
+    database: 'xuechuse'
+    username: 'aaa'
+    password: 'aaa'
+    pool: 5

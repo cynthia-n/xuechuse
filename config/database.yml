@@ -1,0 +1,24 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  database: <%= Settings.db_settings.xuechuse.database %>
+  port: <%= Settings.db_settings.xuechuse.port %>
+  host: <%= Settings.db_settings.xuechuse.host %>
+  username: <%= Settings.db_settings.xuechuse.username %>
+  password: <%= Settings.db_settings.xuechuse.password %>
+  pool: <%= Settings.db_settings.xuechuse.pool %>
+
+development:
+  <<: *default
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *default
+
+production:
+  <<: *default
+
+staging:
+  <<: *default
